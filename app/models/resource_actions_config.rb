@@ -707,7 +707,15 @@ class ResourceActionsConfig
       }
     },
 
-    }.freeze
+    # Project Workspaces (E1.6-b)
+    project_workspaces: {
+      name: 'Project Workspaces',
+      description: 'Workspaces de gestão de demandas e projetos',
+      actions: {
+        create: { name: 'Create', description: 'Criar novos workspaces de projeto' }
+      }
+    }
+  }.freeze
 
   # Backend mirror of the write-group classification in the frontend's
   # permissionDomains.ts. Two pieces, both must stay in sync with the frontend
