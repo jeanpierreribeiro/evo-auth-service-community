@@ -43,6 +43,10 @@ Rails.application.routes.draw do
   # API Routes
   namespace :api do
     namespace :v1 do
+      # Diretório interno de Empréstimos: credencial dedicada e token do operador.
+      post 'internal/loans-directory/search', to: 'loans_directory#search'
+      post 'internal/loans-directory/resolve', to: 'loans_directory#resolve'
+      post 'internal/loans-directory/verify', to: 'loans_directory#verify'
       # Authentication endpoints
       resources :auth, only: [] do
         collection do
